@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+
+    <session-factory>
+
+		
+	  	<!-- Database connection JNDI
+	  	<property name="connection.datasource">java:MySqlDS1</property>
+  		-->
+  		<property name="connection.datasource">java:jboss/datasources/MySqlDS</property>
+  		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://10.0.0.95:3306/Game</property>
+        <property name="connection.username">cmsuser</property>
+        <property name="connection.password">cmsuser</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+       <!-- <property name="connection.pool_size">10</property>-->
+
+        <!-- SQL dialect -->
+       <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+       <!-- <property name="current_session_context_class">thread</property>-->
+
+        <!-- second-level cache  -->
+       <!-- <property name="cache.use_second_level_cache">false</property>
+        <property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>-->
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+		<!-- <property name="format_sql">true</property> -->
+		<property name="use_sql_comments">true</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">none</property>
+        <property name="hibernate.connection.zeroDateTimeBehavior">CONVERT_TO_NULL</property>
+        
+        <mapping class="com.sixdee.dto.ProductDetailsDTO"/>
+        <mapping class="com.sixdee.dto.UserRegisterDTO"/>
+         <mapping class="com.sixdee.dto.MessageDetailsDTO"/>
+         <mapping class="com.sixdee.dto.AppVersionDetails"/>
+         
+          <mapping class="com.sixdee.dto.CartDetaisDTO"/>
+           <mapping class="com.sixdee.dto.DeviceIdDetails"/>
+           <mapping class="com.sixdee.dto.DeviceNameDetails"/>
+            <mapping class="com.sixdee.dto.GamedetailsDTO"/>
+             <mapping class="com.sixdee.dto.OsVersionDetails"/>
+              <mapping class="com.sixdee.dto.ProductIddetailsDTO"/>
+             <mapping class="com.sixdee.dto.RewardDetailsDTO"/>
+              <mapping class="com.sixdee.dto.VideoViewDetails"/>
+              <mapping class="com.sixdee.dto.CartWishDetailsDTO"/>
+        <mapping class="com.sixdee.dto.CartRemoveDetailsDTO"/>
+        <mapping class="com.sixdee.dto.TimeZoneDTO"/>
+        <mapping class="com.sixdee.dto.NotificationDismissDetails"/>
+        <mapping class="com.sixdee.dto.SearchResultdetails"/>
+        <mapping class="com.sixdee.dto.LocationDetails"/>
+          <mapping class="com.sixdee.dto.CurrentTimeDetails"/>
+          <mapping class="com.sixdee.dto.ClickButtonDetails"/>
+          <mapping class="com.sixdee.dto.IntentendataDetails"/>
+          <mapping class="com.sixdee.dto.CustomEventDetails"/>
+    </session-factory>
+
+</hibernate-configuration>
