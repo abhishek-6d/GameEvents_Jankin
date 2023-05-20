@@ -31,6 +31,7 @@ import com.sixdee.imp.bo.EventService;
 import com.sixdee.imp.bo.OperatingSystemBL;
 
 
+
 @RestController
 @RequestMapping("/eventListener")
 @CrossOrigin(origins = "*")
@@ -44,7 +45,7 @@ public class ManagementController {
 	 OperatingSystemBL operatingSystemBL=null;
 	 AppVersionBL appVersionBL=null;
 	
-	@PostMapping({ "/{version}/{eventType}/{phoneNumber}" }) 
+	@PostMapping({ "/{version}/{eventTypes}/{phoneNumber}" }) 
 	public ResponsesDTO notification(@RequestHeader("Authorization") String bearerToken,@PathVariable("version") String version,@PathVariable("eventType") String eventType,
 			@PathVariable("phoneNumber") String phoneNumber, @RequestHeader Map<String, String> headers,HttpServletResponse servletResponse,@RequestBody(required = false) @Valid Request request) {
 		ResponsesDTO responsesDTO=null;
